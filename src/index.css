@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cairo", sans-serif;
+  --font-body: "Tajawal", sans-serif;
+  
+  --color-charcoal: #171717;
+  --color-charcoal-dark: #0E0E0D;
+  --color-offwhite: #F5F0E8;
+  --color-cream: #E9DDCC;
+  --color-ember: #D95724;
+  --color-ember-dark: #A83A18;
+  --color-olive: #685B45;
+
+  /* Set Inter as the default sans serif */
+  --font-sans: var(--font-body);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-charcoal text-offwhite;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-normal uppercase;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-header {
+    @apply bg-charcoal-dark/80 backdrop-blur-md border-b border-white/5;
+  }
+}
