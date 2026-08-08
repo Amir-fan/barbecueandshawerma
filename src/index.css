@@ -3,32 +3,45 @@
 @theme {
   --font-display: "Cairo", sans-serif;
   --font-body: "Tajawal", sans-serif;
-  
-  --color-charcoal: #171717;
-  --color-charcoal-dark: #0E0E0D;
-  --color-offwhite: #F5F0E8;
-  --color-cream: #E9DDCC;
-  --color-ember: #D95724;
-  --color-ember-dark: #A83A18;
-  --color-olive: #685B45;
 
-  /* Set Inter as the default sans serif */
+  /* Surface scale — never all the same flat black */
+  --color-charcoal: #141412;
+  --color-charcoal-mid: #1A1916;
+  --color-charcoal-dark: #0C0B09;
+
+  /* Type */
+  --color-offwhite: #F0EAE0;
+  --color-cream: #DDD3C4;
+  --color-muted: #8C8478;
+
+  /* Ember — the colour of a glowing coal, not a neon accent */
+  --color-ember: #B8451A;
+  --color-ember-dark: #8C3010;
+  --color-ember-warm: #E8651A;
+
   --font-sans: var(--font-body);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    direction: rtl;
   }
 
   body {
-    @apply font-body bg-charcoal text-offwhite;
+    @apply font-body bg-charcoal-dark text-offwhite;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-normal uppercase;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -36,8 +49,29 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
+  /* The "fire line" — a rare, intentional horizontal detail */
+  .fire-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #B8451A 40%, #E8651A 60%, transparent 100%);
+    opacity: 0.6;
+  }
+
+  .fire-line-short {
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: #B8451A;
+    opacity: 0.8;
+  }
+
+  /* Header glass state */
   .glass-header {
-    @apply bg-charcoal-dark/80 backdrop-blur-md border-b border-white/5;
+    background: rgba(12, 11, 9, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(240, 234, 224, 0.05);
   }
 }

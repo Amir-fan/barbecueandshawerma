@@ -1,7 +1,7 @@
 export const restaurant = {
   name: "بي بي إس - باربكيو وشاورما",
-  shortName: "بي بي إس",
-  location: "جبلة - على الكورنيش",
+  shortName: "BBŞ",
+  location: "جبلة - شارع الغزالات",
   phone: "+963 XXX XXX XXX",
   whatsapp: "https://wa.me/963XXXXXXXXX",
   instagram: "#",

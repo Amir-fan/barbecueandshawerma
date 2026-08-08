@@ -10,9 +10,9 @@ export function FullMenu() {
 
   return (
     <Section id="menu" className="bg-[#0A0A0A] min-h-screen border-t border-white/5" containerClass="md:px-12">
-      <SectionHeading 
-        title="المنيو كاملاً" 
-        subtitle="ماذا نقدم" 
+      <SectionHeading
+        title="المنيو كاملاً"
+        subtitle="ماذا نقدم"
         align="center"
         className="mb-16"
       />
@@ -23,14 +23,13 @@ export function FullMenu() {
           <button
             key={cat.id}
             onClick={() => setActiveCategory(cat.id)}
-            className={`relative font-display tracking-widest uppercase text-sm md:text-base px-6 md:px-8 py-3 md:py-4 transition-colors duration-300 rounded-full border ${
-              activeCategory === cat.id 
-                ? "text-charcoal-dark border-transparent" 
-                : "text-offwhite/60 border-white/10 hover:text-offwhite hover:border-white/30"
-            }`}
+            className={`relative font-display tracking-widest uppercase text-sm md:text-base px-6 md:px-8 py-3 md:py-4 transition-colors duration-300 rounded-full border ${activeCategory === cat.id
+              ? "text-charcoal-dark border-transparent"
+              : "text-offwhite/60 border-white/10 hover:text-offwhite hover:border-white/30"
+              }`}
           >
             {activeCategory === cat.id && (
-              <motion.div 
+              <motion.div
                 layoutId="menu-active-tab-bg"
                 className="absolute inset-0 bg-offwhite rounded-full z-0"
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
@@ -53,8 +52,8 @@ export function FullMenu() {
             className="flex flex-col gap-0"
           >
             {filteredItems.map((item, index) => (
-              <motion.div 
-                key={item.id} 
+              <motion.div
+                key={item.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
@@ -70,7 +69,7 @@ export function FullMenu() {
                 <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-48 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 pointer-events-none z-10 rounded-[2rem] overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0">
                   <img src={item.image} alt="" className="w-full h-full object-cover" />
                 </div>
-                
+
                 <div className="flex-1 z-20">
                   <h3 className="font-display text-3xl md:text-4xl text-offwhite uppercase tracking-tighter group-hover:text-ember transition-colors duration-300">
                     {item.name}
@@ -79,7 +78,7 @@ export function FullMenu() {
                     {item.description}
                   </p>
                 </div>
-                
+
                 <div className="z-20 flex items-center gap-6">
                   {item.tag && (
                     <span className="hidden sm:inline-block bg-white/5 border border-white/10 text-white/70 text-xs font-display tracking-widest uppercase px-3 py-1 rounded-full">

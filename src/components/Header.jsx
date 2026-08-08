@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/Button";
 import { restaurant } from "../data/restaurant";
+import logoImg from "../assets/bbs logo white no bg.png";
 
 const NAV_LINKS = [
   { label: "الرئيسية", href: "#home" },
@@ -24,19 +25,16 @@ export function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "glass-header py-4 shadow-lg shadow-black/20" : "bg-transparent py-6"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass-header py-4 shadow-lg shadow-black/20" : "bg-transparent py-6"
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 z-50" aria-label={`${restaurant.name} Home`}>
-            <span className="font-display text-3xl md:text-4xl tracking-wide uppercase font-bold text-offwhite">
-              {restaurant.shortName}
-            </span>
+          <a href="#home" className="flex items-center z-50" aria-label={`${restaurant.name} Home`}>
+            <img src={logoImg} alt="BBŞ Logo" className="h-12 md:h-16 object-contain hover:scale-105 transition-transform duration-300" />
           </a>
 
           {/* Desktop Nav */}
@@ -51,7 +49,6 @@ export function Header() {
               </a>
             ))}
             <div className="w-px h-6 bg-white/10 mx-2" />
-            <span className="text-xs text-white/50 cursor-not-allowed font-display uppercase" title="Language placeholder">عربي / EN</span>
             <Button href={restaurant.whatsapp} target="_blank" rel="noopener noreferrer" variant="primary" size="sm">
               اطلب الآن
             </Button>
@@ -88,9 +85,7 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <div className="flex items-center gap-4 mt-6">
-              <span className="text-sm text-white/50 font-display uppercase">عربي / EN</span>
-            </div>
+
             <Button href={restaurant.whatsapp} target="_blank" rel="noopener noreferrer" variant="primary" className="mt-8 w-64">
               اطلب عبر واتساب
             </Button>

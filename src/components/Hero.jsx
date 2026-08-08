@@ -5,18 +5,18 @@ import { restaurant } from "../data/restaurant";
 export function Hero() {
   return (
     <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-[#0A0A0A]">
-      
+
       {/* Absolute Background Elements for a Bento/Layered feel */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <motion.div 
+        <motion.div
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.15 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vh] blur-3xl rounded-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-ember via-transparent to-transparent"
         />
-        
+
         {/* Floating pill shapes with images */}
-        <motion.div 
+        <motion.div
           initial={{ y: 50, opacity: 0, rotate: -5 }}
           animate={{ y: 0, opacity: 0.8, rotate: -5 }}
           transition={{ duration: 1, delay: 0.4 }}
@@ -25,7 +25,7 @@ export function Hero() {
           <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&q=80" className="w-full h-full object-cover" alt="Grill" />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ y: 50, opacity: 0, rotate: 10 }}
           animate={{ y: 0, opacity: 0.9, rotate: 10 }}
           transition={{ duration: 1, delay: 0.6 }}
@@ -36,19 +36,9 @@ export function Hero() {
       </div>
 
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
-        
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8"
-        >
-          <span className="w-2.5 h-2.5 rounded-full bg-ember animate-pulse shadow-[0_0_10px_rgba(217,87,36,0.8)]" />
-          <span className="text-offwhite/90 font-display text-sm tracking-[0.2em] uppercase">
-            {restaurant.location}
-          </span>
-        </motion.div>
-        
+
+
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

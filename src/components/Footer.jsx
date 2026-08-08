@@ -1,39 +1,92 @@
 import { restaurant } from "../data/restaurant";
+import { Phone, MapPin } from "lucide-react";
+import logoImg from "../assets/bbs logo white no bg.png";
+import { DevTag } from "./DevTag";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal border-t border-white/5 py-12 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-        {/* Logo / Brand */}
-        <div>
-          <span className="font-display text-2xl tracking-wide uppercase font-bold text-offwhite/50 block mb-2">
-            {restaurant.shortName}
-          </span>
-          <p className="font-body font-light text-sm text-offwhite/40">
-            {restaurant.name} <br/>
-            {restaurant.location}
+    <footer
+      dir="rtl"
+      className="relative bg-charcoal-dark border-t border-offwhite/5 grain-overlay"
+    >
+      {/* Coast teal top bar */}
+      <div className="w-full h-[2px] bg-coast opacity-30" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-10 relative z-10">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 mb-12">
+
+          {/* Brand */}
+          <div className="flex flex-col gap-4">
+            <img src={logoImg} alt="BBŞ" className="h-11 object-contain object-right" />
+            <p className="font-body text-sm text-muted font-light leading-relaxed max-w-[200px]">
+              باربكيو وشاورما على الفحم الطبيعي في جبلة، سوريا.
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div className="flex flex-col gap-3">
+            <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-1">للتواصل</p>
+            <a
+              href={`tel:${restaurant.phone.replace(/\s+/g, "")}`}
+              className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light flex items-center gap-2"
+            >
+              <Phone size={13} className="opacity-50 shrink-0" />
+              <span dir="ltr">{restaurant.phone}</span>
+            </a>
+            <a
+              href={restaurant.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light"
+            >
+              واتساب
+            </a>
+            <a
+              href={restaurant.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light flex items-center gap-2"
+            >
+              <MapPin size={13} className="opacity-50 shrink-0" />
+              {restaurant.location}
+            </a>
+          </div>
+
+          {/* Social + hours */}
+          <div className="flex flex-col gap-3">
+            <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-1">تابعنا</p>
+            <a href={restaurant.instagram} className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light">
+              Instagram
+            </a>
+            <a href={restaurant.facebook} className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light">
+              Facebook
+            </a>
+            <div className="mt-3">
+              <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-2">أوقات الدوام</p>
+              <p className="font-body text-sm text-muted font-light">{restaurant.openingHours.weekdays}</p>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Fire-line divider */}
+        <span className="fire-line block mb-8" />
+
+        {/* Bottom row */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="font-body text-xs text-muted/50 font-light">
+            &copy; {currentYear} {restaurant.name}. جميع الحقوق محفوظة.
+          </p>
+          <p className="font-body text-[10px] tracking-[0.22em] uppercase text-muted/35">
+            Designed with restraint
           </p>
         </div>
 
-        {/* Socials */}
-        <div className="flex flex-wrap justify-center gap-6">
-          <a href={restaurant.instagram} className="font-display text-sm tracking-widest text-offwhite/40 hover:text-ember transition-colors duration-300 uppercase">
-            Instagram
-          </a>
-          <a href={restaurant.facebook} className="font-display text-sm tracking-widest text-offwhite/40 hover:text-ember transition-colors duration-300 uppercase">
-            Facebook
-          </a>
-          <a href={restaurant.whatsapp} className="font-display text-sm tracking-widest text-offwhite/40 hover:text-ember transition-colors duration-300 uppercase">
-            WhatsApp
-          </a>
-        </div>
-
-        {/* Copyright */}
-        <div className="font-body text-xs font-light text-offwhite/30">
-          &copy; {currentYear} {restaurant.name}. <br className="md:hidden" /> جميع الحقوق محفوظة.
-        </div>
+        {/* Fanari Labs credit */}
+        <DevTag />
       </div>
     </footer>
   );
