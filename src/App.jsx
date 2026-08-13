@@ -6,10 +6,13 @@ import { FullMenu } from "./components/FullMenu";
 import { LocationSection } from "./components/LocationSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
+import { LanguageSelectionScreen } from "./components/LanguageSelectionScreen";
+import { WhatsAppSticky } from "./components/WhatsAppSticky";
 
 export default function App() {
   return (
     <>
+      <LanguageSelectionScreen />
       <Header />
       <main>
         <Hero />
@@ -20,6 +23,7 @@ export default function App() {
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppSticky />
     </>
   );
 }

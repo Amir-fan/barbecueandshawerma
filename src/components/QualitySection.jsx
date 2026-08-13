@@ -1,26 +1,30 @@
 import { Section } from "./ui/Section";
+import { useLanguage } from "../context/LanguageContext";
 
 export function QualitySection() {
-  const points = [
-    { num: "٠١", title: "مشوي على فحم طبيعي", desc: "نستخدم الفحم الطبيعي لنعطي لحومنا تلك النكهة المدخنة التي لا تخطئها العين." },
-    { num: "٠٢", title: "تحضير طازج يومياً", desc: "لا توجد طرق مختصرة. كل سيخ وسندويشة تحضر عند الطلب." },
-    { num: "٠٣", title: "لا نساوم على الجودة", desc: "طعام ساخن وطازج يُقدم بضيافة واثقة على الساحل السوري." },
-  ];
+  const { t, currentLanguage } = useLanguage();
+  
+  // Access the raw array or just map over 0,1,2,3
+  const itemsCount = t('quality.items').length || 4;
+  const items = Array.from({ length: itemsCount }).map((_, i) => ({
+    num: `0${i + 1}`,
+    title: t(`quality.items.${i}.title`),
+    desc: t(`quality.items.${i}.desc`),
+  }));
 
   return (
     <Section className="bg-[#050505] border-y border-white/5" containerClass="md:px-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
         <div className="lg:sticky lg:top-32 relative">
-          <h2 className="text-5xl md:text-7xl lg:text-[5rem] font-display text-offwhite uppercase tracking-tight leading-[1.1] mb-8">
-            السر كله <br /> <span className="text-ember">في النار</span>
+          <h2 className="text-5xl md:text-7xl lg:text-[5rem] font-display text-offwhite uppercase tracking-tight leading-[1.1] mb-8" dangerouslySetInnerHTML={{ __html: t("quality.title").replace('الطعم', '<br/><span class="text-ember">الطعم</span>') }}>
           </h2>
           <p className="text-offwhite/50 font-body text-xl font-light max-w-md leading-relaxed">
-            لا يوجد بديل لحرارة الفحم الحقيقي. هذه هي طريقتنا دائماً، ولهذا السبب طعامنا يتميز بنكهته الفريدة.
+            {t("quality.subtitle")}
           </p>
         </div>
 
         <div className="flex flex-col gap-8">
-          {points.map((point) => (
+          {items.map((point) => (
             <div key={point.num} className="flex flex-col md:flex-row gap-6 md:gap-8 group bg-[#111] p-10 rounded-[3rem] border border-white/5 hover:border-ember/30 transition-colors duration-500 shadow-2xl">
               <span className="font-display text-6xl md:text-7xl text-transparent group-hover:text-ember transition-colors duration-500 font-bold leading-none" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)" }}>
                 {point.num}

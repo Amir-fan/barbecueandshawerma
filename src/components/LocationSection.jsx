@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { restaurant } from "../data/restaurant";
 import { Button } from "./ui/Button";
 import logoImg from "../assets/bbs logo white no bg.png";
+import { useLanguage } from "../context/LanguageContext";
 
 const reveal = (delay = 0) => ({
   initial:     { opacity: 0, y: 18 },
@@ -20,10 +21,10 @@ const dotGrid =
   `radial-gradient(circle, rgba(237,232,223,0.1) 1px, transparent 1px)`;
 
 export function LocationSection() {
+  const { t, currentLanguage } = useLanguage();
   return (
     <section
       id="location"
-      dir="rtl"
       className="relative overflow-hidden border-t border-offwhite/5"
       style={{
         backgroundColor: "#0E0D0B",
@@ -56,10 +57,9 @@ export function LocationSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
 
-        {/* Label */}
         <motion.div {...reveal(0)} className="flex items-center gap-4 mb-16">
           <span className="fire-line-short" />
-          <span className="font-body text-[11px] tracking-[0.3em] uppercase text-muted">الموقع وأوقات العمل</span>
+          <span className="font-body text-[11px] tracking-[0.3em] uppercase text-muted">{t("location.title")}</span>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
@@ -71,9 +71,9 @@ export function LocationSection() {
             {/* City — typographically dominant */}
             <motion.div {...reveal(0.08)}>
               <h2 className="font-statement text-7xl md:text-9xl uppercase tracking-tight text-offwhite leading-none mb-2">
-                جبلة
+                {currentLanguage === 'ar' ? 'جبلة' : currentLanguage === 'tr' ? 'Ceble' : 'Jableh'}
               </h2>
-              <p className="font-body text-base text-muted font-light">{restaurant.location}</p>
+              <p className="font-body text-base text-muted font-light">{t("restaurant.location")}</p>
             </motion.div>
 
             {/* Fire line divider */}
@@ -82,13 +82,13 @@ export function LocationSection() {
             {/* Details */}
             <motion.div {...reveal(0.14)} className="grid grid-cols-2 gap-7">
               <div className="flex flex-col gap-2">
-                <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember">أوقات العمل</p>
-                <p className="font-body text-sm text-offwhite/80 font-light leading-relaxed">{restaurant.openingHours.weekdays}</p>
-                <p className="font-body text-xs text-muted font-light">عطلة: {restaurant.openingHours.weekend}</p>
+                <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember">{t("location.hours")}</p>
+                <p className="font-body text-sm text-offwhite/80 font-light leading-relaxed">{t("restaurant.hoursWeekdays")}</p>
+                <p className="font-body text-xs text-muted font-light">{t("location.weekend")}: {t("restaurant.hoursWeekend")}</p>
               </div>
               <div className="flex flex-col gap-2">
-                <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember">الهاتف</p>
-                <p className="font-body text-sm text-offwhite/80 font-light" dir="ltr" style={{ textAlign: "right" }}>
+                <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember">{t("contact.phone")}</p>
+                <p className="font-body text-sm text-offwhite/80 font-light" dir="ltr" style={{ textAlign: currentLanguage === 'ar' ? "right" : "left" }}>
                   {restaurant.phone}
                 </p>
               </div>
@@ -97,10 +97,10 @@ export function LocationSection() {
             {/* Actions */}
             <motion.div {...reveal(0.18)} className="flex items-center gap-8 flex-wrap">
               <Button href={restaurant.whatsapp} target="_blank" rel="noopener noreferrer" variant="primary">
-                واتساب
+                {t("common.orderWhatsapp")}
               </Button>
               <Button href={restaurant.mapsUrl} target="_blank" rel="noopener noreferrer" variant="secondary">
-                خرائط جوجل ←
+                {currentLanguage === 'ar' ? 'خرائط جوجل ←' : currentLanguage === 'tr' ? 'Google Haritalar ←' : 'Google Maps ←'}
               </Button>
             </motion.div>
           </div>

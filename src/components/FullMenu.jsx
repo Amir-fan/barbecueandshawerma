@@ -3,16 +3,22 @@ import { Section, SectionHeading } from "./ui/Section";
 import { Button } from "./ui/Button";
 import { menuCategories, menuItems } from "../data/menu";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 export function FullMenu() {
+  const { t, currentLanguage } = useLanguage();
   const [activeCategory, setActiveCategory] = useState(menuCategories[0].id);
   const filteredItems = menuItems.filter(item => item.category === activeCategory);
+  
+  const formatPrice = (price) => {
+    return new Intl.NumberFormat(currentLanguage === 'ar' ? 'ar-SY' : 'en-US').format(price) + ' ' + t('common.currency');
+  };
 
   return (
     <Section id="menu" className="bg-[#0A0A0A] min-h-screen border-t border-white/5" containerClass="md:px-12">
       <SectionHeading
-        title="المنيو كاملاً"
-        subtitle="ماذا نقدم"
+        title={t("fullMenu.title")}
+        subtitle={t("fullMenu.subtitle")}
         align="center"
         className="mb-16"
       />
@@ -35,7 +41,7 @@ export function FullMenu() {
                 transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
               />
             )}
-            <span className="relative z-10">{cat.label}</span>
+            <span className="relative z-10">{t(`menuCategories.${cat.id}.label`)}</span>
           </button>
         ))}
       </div>
@@ -72,10 +78,10 @@ export function FullMenu() {
 
                 <div className="flex-1 z-20">
                   <h3 className="font-display text-3xl md:text-4xl text-offwhite uppercase tracking-tighter group-hover:text-ember transition-colors duration-300">
-                    {item.name}
+                    {t(`menuItems.${item.id}.name`)}
                   </h3>
                   <p className="text-offwhite/50 font-body font-light text-base md:text-lg mt-2 max-w-lg">
-                    {item.description}
+                    {t(`menuItems.${item.id}.description`)}
                   </p>
                 </div>
 
@@ -86,7 +92,7 @@ export function FullMenu() {
                     </span>
                   )}
                   <span className="font-display text-2xl md:text-3xl text-offwhite whitespace-nowrap">
-                    {item.price}
+                    {formatPrice(item.price)}
                   </span>
                 </div>
               </motion.div>
@@ -96,9 +102,11 @@ export function FullMenu() {
       </div>
 
       <div className="flex justify-center">
+        {/*
         <Button href={`${import.meta.env.BASE_URL}menu/bbs-menu.pdf`} target="_blank" variant="outline" className="rounded-full border-white/20 px-12">
           تحميل المنيو (PDF)
         </Button>
+        */}
       </div>
     </Section>
   );

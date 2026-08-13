@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 import { restaurant } from "../data/restaurant";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Hero() {
+  const { t } = useLanguage();
   return (
     <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-[#0A0A0A]">
 
@@ -45,12 +47,12 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-[13vw] md:text-[9vw] lg:text-[8vw] leading-[1.2] font-display text-offwhite tracking-tight"
         >
-          تذوق طعم <br className="md:hidden" />
+          {t("hero.tasteOf")} <br className="md:hidden" />
           <span className="relative inline-block px-6 mx-2">
-            <span className="relative z-10 font-bold text-charcoal-dark">النار</span>
+            <span className="relative z-10 font-bold text-charcoal-dark">{t("hero.fire")}</span>
             <span className="absolute inset-0 bg-ember rounded-2xl md:rounded-[3rem] -rotate-2 scale-110 z-0" />
           </span>
-          <br className="hidden md:block" /> على البحر
+          <br className="hidden md:block" /> {t("hero.onSea")}
         </motion.h1>
 
         <motion.p
@@ -59,7 +61,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-2xl text-offwhite/60 max-w-2xl mt-10 font-body font-light text-balance"
         >
-          شاورما وبرغر ومشاوي على الفحم. مصممة لأصحاب الذوق العالي ليعيشوا التجربة.
+          {t("hero.subtitle")}
         </motion.p>
 
         <motion.div
@@ -69,10 +71,10 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-4 mt-12"
         >
           <Button href="#menu" variant="primary" size="lg" className="rounded-full px-10 text-lg">
-            تصفح المنيو
+            {t("common.browseMenu")}
           </Button>
           <Button href="#contact" variant="outline" size="lg" className="rounded-full px-10 border-white/20 text-offwhite hover:bg-white/5 hover:border-white/40 text-lg">
-            دليل الموقع
+            {t("common.locationGuide")}
           </Button>
         </motion.div>
       </div>

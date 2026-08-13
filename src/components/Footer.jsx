@@ -2,13 +2,14 @@ import { restaurant } from "../data/restaurant";
 import { Phone, MapPin } from "lucide-react";
 import logoImg from "../assets/bbs logo white no bg.png";
 import { DevTag } from "./DevTag";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Footer() {
+  const { t, currentLanguage } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
     <footer
-      dir="rtl"
       className="relative bg-charcoal-dark border-t border-offwhite/5 grain-overlay"
     >
       {/* Coast teal top bar */}
@@ -22,13 +23,13 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <img src={logoImg} alt="BBŞ" className="h-11 object-contain object-right" />
             <p className="font-body text-sm text-muted font-light leading-relaxed max-w-[200px]">
-              باربكيو وشاورما على الفحم الطبيعي في جبلة، سوريا.
+              {t("footer.desc")}
             </p>
           </div>
 
           {/* Contact */}
           <div className="flex flex-col gap-3">
-            <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-1">للتواصل</p>
+            <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-1">{t("contact.title")}</p>
             <a
               href={`tel:${restaurant.phone.replace(/\s+/g, "")}`}
               className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light flex items-center gap-2"
@@ -42,7 +43,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light"
             >
-              واتساب
+              {t("common.orderWhatsapp")}
             </a>
             <a
               href={restaurant.mapsUrl}
@@ -51,13 +52,13 @@ export function Footer() {
               className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light flex items-center gap-2"
             >
               <MapPin size={13} className="opacity-50 shrink-0" />
-              {restaurant.location}
+              {t("restaurant.location")}
             </a>
           </div>
 
           {/* Social + hours */}
           <div className="flex flex-col gap-3">
-            <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-1">تابعنا</p>
+            <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-1">{t("contact.followUs")}</p>
             <a href={restaurant.instagram} className="font-body text-sm text-muted hover:text-offwhite/80 transition-colors font-light">
               Instagram
             </a>
@@ -65,8 +66,8 @@ export function Footer() {
               Facebook
             </a>
             <div className="mt-3">
-              <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-2">أوقات الدوام</p>
-              <p className="font-body text-sm text-muted font-light">{restaurant.openingHours.weekdays}</p>
+              <p className="font-display text-[10px] tracking-[0.28em] uppercase text-ember mb-2">{t("location.hours")}</p>
+              <p className="font-body text-sm text-muted font-light">{t("restaurant.hoursWeekdays")}</p>
             </div>
           </div>
 
@@ -78,7 +79,7 @@ export function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-body text-xs text-muted/50 font-light">
-            &copy; {currentYear} {restaurant.name}. جميع الحقوق محفوظة.
+            &copy; {currentYear} {t("restaurant.name")}. {t("footer.rights")}.
           </p>
           <p className="font-body text-[10px] tracking-[0.22em] uppercase text-muted/35">
             Designed with restraint

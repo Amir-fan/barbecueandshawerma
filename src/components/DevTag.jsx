@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Phone, Mail, X } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 export function DevTag() {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,11 +14,11 @@ export function DevTag() {
         className="group flex flex-col items-center gap-1 mx-auto mt-12 mb-4 bg-[#0A0A0A] border border-white/10 hover:border-white/30 transition-all duration-300 px-8 py-4 rounded-xl"
       >
         <span className="font-display text-[10px] tracking-widest text-offwhite/40 uppercase mb-1">
-          تم التطوير بواسطة
+          {t("devTag.developedBy")}
         </span>
         <span className="font-display text-sm tracking-widest font-black text-white uppercase flex items-center gap-3">
           Fanari Labs
-          <span className="text-white/70 text-xs tracking-normal font-normal px-3 py-1 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors">اضغط للتواصل</span>
+          <span className="text-white/70 text-xs tracking-normal font-normal px-3 py-1 bg-white/5 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors">{t("devTag.clickToContact")}</span>
         </span>
       </button>
 
@@ -56,7 +58,7 @@ export function DevTag() {
                   fanari<span className="text-white/50 text-xl font-normal ml-1">labs</span>
                 </h2>
                 <p className="text-offwhite/60 font-body font-light text-sm mb-10 max-w-[250px]">
-                  We build bespoke websites and autonomous AI systems that work while you sleep.
+                  {t("devTag.desc")}
                 </p>
 
                 <div className="w-full flex flex-col gap-4">

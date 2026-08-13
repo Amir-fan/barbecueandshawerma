@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "./ui/Button";
 import { restaurant } from "../data/restaurant";
 import logoImg from "../assets/bbs logo white no bg.png";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const NAV_LINKS = [
-  { label: "الرئيسية", href: "#home" },
-  { label: "المنيو", href: "#menu" },
-  { label: "من نحن", href: "#about" },
-  { label: "اتصل بنا", href: "#contact" }
+  { key: "nav.home", href: "#home" },
+  { key: "nav.menu", href: "#menu" },
+  { key: "nav.about", href: "#about" },
+  { key: "nav.contact", href: "#contact" }
 ];
 
 export function Header() {
+  const { t, currentLanguage, changeLanguage } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -41,27 +44,52 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <a
-                key={link.label}
+                key={link.key}
                 href={link.href}
                 className="text-sm font-display uppercase tracking-widest text-offwhite/80 hover:text-ember transition-colors duration-300"
               >
-                {link.label}
+                {t(link.key)}
               </a>
             ))}
             <div className="w-px h-6 bg-white/10 mx-2" />
+            <div className="relative group">
+              <button className="flex items-center gap-2 text-offwhite/80 hover:text-ember transition-colors duration-300">
+                <Globe size={20} />
+                <span className="text-sm font-display uppercase">{currentLanguage}</span>
+              </button>
+              <div className="absolute top-full right-0 mt-2 py-2 w-32 bg-charcoal-dark border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col">
+                <button onClick={() => changeLanguage('ar')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">العربية</button>
+                <button onClick={() => changeLanguage('en')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">English</button>
+                <button onClick={() => changeLanguage('tr')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">Türkçe</button>
+              </div>
+            </div>
             <Button href={restaurant.whatsapp} target="_blank" rel="noopener noreferrer" variant="primary" size="sm">
-              اطلب الآن
+              {t("common.orderNow")}
             </Button>
           </nav>
 
-          {/* Mobile Toggle */}
-          <button
-            className="lg:hidden text-offwhite z-50 p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle Menu"
-          >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-2 lg:hidden z-50">
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-offwhite/80 p-2 hover:text-ember transition-colors duration-300">
+                <Globe size={24} />
+                <span className="text-xs font-display uppercase">{currentLanguage}</span>
+              </button>
+              <div className="absolute top-full right-0 mt-2 py-2 w-32 bg-charcoal-dark border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col">
+                <button onClick={() => changeLanguage('ar')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">العربية</button>
+                <button onClick={() => changeLanguage('en')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">English</button>
+                <button onClick={() => changeLanguage('tr')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">Türkçe</button>
+              </div>
+            </div>
+            
+            <button
+              className="text-offwhite p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle Menu"
+            >
+              {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </motion.header>
 
@@ -77,17 +105,17 @@ export function Header() {
           >
             {NAV_LINKS.map((link) => (
               <a
-                key={link.label}
+                key={link.key}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-4xl font-display uppercase tracking-widest text-offwhite hover:text-ember transition-colors duration-300"
               >
-                {link.label}
+                {t(link.key)}
               </a>
             ))}
 
             <Button href={restaurant.whatsapp} target="_blank" rel="noopener noreferrer" variant="primary" className="mt-8 w-64">
-              اطلب عبر واتساب
+              {t("common.orderWhatsapp")}
             </Button>
           </motion.div>
         )}

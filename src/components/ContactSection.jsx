@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 import { restaurant } from "../data/restaurant";
 import logoImg from "../assets/bbs logo white no bg.png";
+import { useLanguage } from "../context/LanguageContext";
 
 /**
  * Grill grate pattern — repeating perpendicular lines at ~48px intervals.
@@ -26,10 +27,10 @@ const grillPattern = `
 `.trim().replace(/\s+/g, " ");
 
 export function ContactSection() {
+  const { t } = useLanguage();
   return (
     <section
       id="contact"
-      dir="rtl"
       className="relative overflow-hidden border-t border-offwhite/5"
       style={{
         backgroundColor: "#0D0B08",
@@ -90,8 +91,8 @@ export function ContactSection() {
           transition={{ duration: 0.9, delay: 0.06, ease: [0.16, 1, 0.3, 1] }}
           className="font-statement text-[13vw] sm:text-8xl md:text-[9rem] uppercase tracking-tight leading-none text-offwhite mb-8"
         >
-          جاهز لتذوق{" "}
-          <span className="text-ember">النار؟</span>
+          {t("contact.readyToTaste")}{" "}
+          <span className="text-ember">{t("contact.fire")}</span>
         </motion.h2>
 
         <motion.p
@@ -101,7 +102,7 @@ export function ContactSection() {
           transition={{ duration: 0.75, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
           className="font-body text-lg md:text-xl text-muted font-light max-w-md leading-relaxed mb-14"
         >
-          طعام ساخن، مكونات طازجة، وضيافة واثقة على الكورنيش في جبلة.
+          {t("contact.desc")}
         </motion.p>
 
         <motion.div
@@ -119,13 +120,13 @@ export function ContactSection() {
             size="lg"
             className="px-12"
           >
-            اطلب عبر واتساب
+            {t("common.orderWhatsapp")}
           </Button>
           <Button
             href={`tel:${restaurant.phone.replace(/\s+/g, "")}`}
             variant="secondary"
           >
-            اتصل الآن ←
+            {t("contact.callNow")}
           </Button>
         </motion.div>
       </div>

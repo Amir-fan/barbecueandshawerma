@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { heroCategories } from "../data/menu";
+import { useLanguage } from "../context/LanguageContext";
 
 // Carefully matched food images — each one is actually that category
 const CAT_IMAGES = {
@@ -16,6 +17,7 @@ const CAT_IMAGES = {
 const featured = ["chicken_shawarma", "meat_shawarma"];
 
 export function MenuCategories() {
+  const { t } = useLanguage();
   const [hovered, setHovered] = useState(null);
 
   const featuredCats  = heroCategories.filter(c => featured.includes(c.id));
@@ -24,7 +26,6 @@ export function MenuCategories() {
   return (
     <section
       id="categories"
-      dir="rtl"
       className="bg-charcoal border-t border-offwhite/5 py-20 md:py-28"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -33,10 +34,10 @@ export function MenuCategories() {
         <div className="mb-14">
           <div className="flex items-center gap-4 mb-5">
             <span className="fire-line-short" />
-            <span className="font-body text-[11px] tracking-[0.3em] uppercase text-muted">تصفح الأقسام</span>
+            <span className="font-body text-[11px] tracking-[0.3em] uppercase text-muted">{t("categories.subtitle")}</span>
           </div>
           <h2 className="font-display font-black text-5xl md:text-7xl lg:text-8xl text-offwhite uppercase tracking-tight leading-none">
-            ماذا نقدم
+            {t("categories.title")}
           </h2>
         </div>
 
@@ -53,7 +54,7 @@ export function MenuCategories() {
               {/* Food photo */}
               <img
                 src={CAT_IMAGES[cat.id]}
-                alt={cat.label}
+                alt={t(`menuCategories.${cat.id}.label`)}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
               {/* Tiny dark overlay — just enough, not heavy */}
@@ -65,10 +66,10 @@ export function MenuCategories() {
               <div className="absolute bottom-0 inset-x-0 p-6 md:p-8 flex items-end justify-between">
                 <div>
                   <h3 className="font-display font-black text-3xl md:text-4xl lg:text-5xl text-offwhite uppercase tracking-tight leading-none">
-                    {cat.label}
+                    {t(`menuCategories.${cat.id}.label`)}
                   </h3>
-                  {cat.description && (
-                    <p className="font-body text-sm text-offwhite/55 mt-2 font-light">{cat.description}</p>
+                  {t(`menuCategories.${cat.id}.description`) && (
+                    <p className="font-body text-sm text-offwhite/55 mt-2 font-light">{t(`menuCategories.${cat.id}.description`)}</p>
                   )}
                 </div>
                 <span className={`font-display text-xl text-ember transition-all duration-300 ${
@@ -92,7 +93,7 @@ export function MenuCategories() {
               {/* Food photo */}
               <img
                 src={CAT_IMAGES[cat.id]}
-                alt={cat.label}
+                alt={t(`menuCategories.${cat.id}.label`)}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
               />
               {/* Tiny dark overlay */}
@@ -101,7 +102,7 @@ export function MenuCategories() {
 
               <div className="absolute bottom-0 inset-x-0 p-4">
                 <span className="font-display font-bold text-lg md:text-xl lg:text-2xl text-offwhite uppercase tracking-tight leading-none">
-                  {cat.label}
+                  {t(`menuCategories.${cat.id}.label`)}
                 </span>
               </div>
             </a>
