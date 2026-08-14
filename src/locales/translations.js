@@ -195,7 +195,7 @@ export const translations = {
       meat_shawarma: { label: "Meat Shawarma", description: "Fresh and premium meat shawarma." },
       barbecue: { label: "BBQ Grills", description: "Grilled to perfection over charcoal." },
       grilled_chicken: { label: "Rotisserie Chicken", description: "Rotisserie chicken with savory spices." },
-      boneless_chicken: { label: "Boneless Chicken", description: "Delicious grilled boneless chicken." },
+      boneless_chicken: { label: "Special Chicken", description: "Delicious grilled boneless chicken." },
       rice: { label: "Rice", description: "Authentic oriental rice dishes." },
       sides: { label: "Sides", description: "Perfect additions to your meal." },
       salads: { label: "Salads", description: "Fresh and crispy greens." },
@@ -211,7 +211,7 @@ export const translations = {
       7: { name: "Italian Shawarma", description: "Toasted tourist bread with our special sauce, chicken shawarma, fresh bell peppers, mushrooms, corn, and melted cheese." },
       8: { name: "Extra Shawarma", description: "Rich chicken shawarma in Saj bread, with mushrooms, corn, melted cheese, and delicious sauce." },
       9: { name: "Shawarma Fatteh", description: "Layers of fried bread and white rice with chicken shawarma, topped with tahini sauce and roasted nuts." },
-      10: { name: "Chic Shawarma", description: "Chicken shawarma with crispy fries, tomatoes, lettuce, pickles, topped with ranch and BBQ sauce." },
+      10: { name: "Shawerma BBŞ", description: "Chicken shawarma with crispy fries, tomatoes, lettuce, pickles, topped with ranch and BBQ sauce." },
       
       // Meat Shawarma
       11: { name: "Khartoucha", description: "" },
