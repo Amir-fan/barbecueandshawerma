@@ -18,6 +18,7 @@ export function Header() {
   const { t, currentLanguage, changeLanguage } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileLangOpen, setMobileLangOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -70,16 +71,30 @@ export function Header() {
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-2 lg:hidden z-50">
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-offwhite/80 p-2 hover:text-ember transition-colors duration-300">
+            <div className="relative">
+              <button 
+                onClick={() => setMobileLangOpen(!mobileLangOpen)}
+                className="flex items-center gap-1 text-offwhite/80 p-2 hover:text-ember transition-colors duration-300"
+              >
                 <Globe size={24} />
                 <span className="text-xs font-display uppercase">{currentLanguage}</span>
               </button>
-              <div className="absolute top-full right-0 mt-2 py-2 w-32 bg-charcoal-dark border border-white/10 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col">
-                <button onClick={() => changeLanguage('ar')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">العربية</button>
-                <button onClick={() => changeLanguage('en')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">English</button>
-                <button onClick={() => changeLanguage('tr')} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">Türkçe</button>
-              </div>
+              
+              <AnimatePresence>
+                {mobileLangOpen && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full right-0 mt-2 py-2 w-32 bg-charcoal-dark border border-white/10 rounded-xl shadow-xl flex flex-col z-[60]"
+                  >
+                    <button onClick={() => { changeLanguage('ar'); setMobileLangOpen(false); }} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">العربية</button>
+                    <button onClick={() => { changeLanguage('en'); setMobileLangOpen(false); }} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">English</button>
+                    <button onClick={() => { changeLanguage('tr'); setMobileLangOpen(false); }} className="px-4 py-2 text-sm text-offwhite hover:bg-white/5 hover:text-ember text-right">Türkçe</button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
             
             <button
