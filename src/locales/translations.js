@@ -13,6 +13,15 @@ export const translations = {
       locationGuide: "دليل الموقع",
       currency: "ل.س"
     },
+    cart: {
+      title: "سلة المشتريات",
+      empty: "السلة فارغة",
+      total: "المجموع",
+      checkout: "اطلب عبر واتساب",
+      addToCart: "أضف للسلة",
+      checkoutMessage: "مرحباً! أود طلب:",
+      totalLabel: "المجموع الكلي:"
+    },
     hero: {
       tasteOf: "تذوق طعم",
       fire: "النار",
@@ -178,6 +187,15 @@ export const translations = {
       browseMenu: "Browse Menu",
       locationGuide: "Location Guide",
       currency: "SYP"
+    },
+    cart: {
+      title: "Your Cart",
+      empty: "Cart is empty",
+      total: "Total",
+      checkout: "Order via WhatsApp",
+      addToCart: "Add to Cart",
+      checkoutMessage: "مرحباً! أود طلب:",
+      totalLabel: "المجموع الكلي:"
     },
     hero: {
       tasteOf: "Taste the",

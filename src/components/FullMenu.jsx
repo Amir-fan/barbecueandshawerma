@@ -1,17 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Section, SectionHeading } from "./ui/Section";
 import { Button } from "./ui/Button";
 import { menuCategories, menuItems } from "../data/menu";
 import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Check } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { useCart } from "../context/CartContext";
 
 export function FullMenu() {
   const { t, currentLanguage } = useLanguage();
+  const { addToCart } = useCart();
   const [activeCategory, setActiveCategory] = useState(menuCategories[0].id);
   const filteredItems = menuItems.filter(item => item.category === activeCategory);
   
   const formatPrice = (price) => {
     return new Intl.NumberFormat(currentLanguage === 'ar' ? 'ar-SY' : 'en-US').format(price) + ' ' + t('common.currency');
+  };
+
+  const AddToCartBtn = ({ item }) => {
+    const [added, setAdded] = useState(false);
+    
+    const handleAdd = () => {
+      addToCart(item);
+      setAdded(true);
+      setTimeout(() => setAdded(false), 1500);
+    };
+
+    return (
+      <motion.button 
+        whileTap={{ scale: 0.9 }}
+        onClick={handleAdd}
+        className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
+          added 
+            ? 'bg-green-500/20 text-green-500' 
+            : 'bg-ember/20 hover:bg-ember text-ember hover:text-white'
+        }`}
+        aria-label="Add to cart"
+      >
+        {added ? <Check size={20} /> : <Plus size={20} />}
+        <span className="hidden sm:inline-block font-display text-sm tracking-wider uppercase">
+          {added ? (currentLanguage === 'ar' ? 'تمت الإضافة' : 'Added') : t('cart.addToCart')}
+        </span>
+      </motion.button>
+    );
   };
 
   return (
@@ -94,6 +125,7 @@ export function FullMenu() {
                   <span className="font-display text-2xl md:text-3xl text-offwhite whitespace-nowrap">
                     {formatPrice(item.price)}
                   </span>
+                  <AddToCartBtn item={item} />
                 </div>
               </motion.div>
             ))}

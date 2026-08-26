@@ -8,6 +8,8 @@ import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { LanguageSelectionScreen } from "./components/LanguageSelectionScreen";
 import { WhatsAppSticky } from "./components/WhatsAppSticky";
+import { CartWidget } from "./components/CartWidget";
+import { CartDrawer } from "./components/CartDrawer";
 
 export default function App() {
   return (
@@ -24,6 +26,8 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppSticky />
+      <CartWidget />
+      <CartDrawer />
     </>
   );
 }
