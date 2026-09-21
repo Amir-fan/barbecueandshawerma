@@ -1,11 +1,24 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { menuItems } from '../data/menu';
 
 const CartContext = createContext();
+const menuItemsById = new Map(menuItems.map(item => [item.id, item]));
 
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem('bbs_cart');
-    return savedCart ? JSON.parse(savedCart) : [];
+    if (!savedCart) return [];
+
+    try {
+      return JSON.parse(savedCart).map(savedItem => {
+        const currentItem = menuItemsById.get(savedItem.id);
+        return currentItem
+          ? { ...currentItem, quantity: savedItem.quantity }
+          : savedItem;
+      });
+    } catch {
+      return [];
+    }
   });
   const [isCartOpen, setIsCartOpen] = useState(false);
 

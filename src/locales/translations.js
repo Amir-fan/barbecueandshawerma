@@ -48,6 +48,8 @@ export const translations = {
       // Chicken Shawarma
       1: { name: "خرتوشة", description: "" },
       2: { name: "سندويش شاورما", description: "" },
+      3: { name: "شاورما خبز تنور", description: "" },
+      59: { name: "كريزي شاورما", description: "" },
       4: { name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز." },
       5: { name: "شاورما صمون", description: "" },
       6: { name: "وجبة شاورما عربي", description: "" },
@@ -59,6 +61,8 @@ export const translations = {
       // Meat Shawarma
       11: { name: "خرتوشة", description: "" },
       12: { name: "سندويش شاورما", description: "" },
+      13: { name: "شاورما خبز عراقي", description: "" },
+      60: { name: "كريزي شاورما", description: "" },
       14: { name: "شاورما خبز تنور", description: "" },
       15: { name: "شاورما عربي", description: "" },
       16: { name: "ماريا", description: "شاورما لحم طازجة بخبز سياحي مع البندورة المشوية، البيواز، والصوص الخاص." },
@@ -223,6 +227,8 @@ export const translations = {
       // Chicken Shawarma
       1: { name: "Khartoucha", description: "" },
       2: { name: "Shawarma Sandwich", description: "" },
+      3: { name: "Tandoor Bread Shawarma", description: "" },
+      59: { name: "Crazy Shawarma", description: "" },
       4: { name: "Casablanca", description: "A mix of Saj and Tourist bread with chicken shawarma, pickles, grilled tomatoes, biwaz, pomegranate molasses, and special sauce." },
       5: { name: "Samoon Shawarma", description: "" },
       6: { name: "Arabic Shawarma Meal", description: "" },
@@ -234,6 +240,8 @@ export const translations = {
       // Meat Shawarma
       11: { name: "Khartoucha", description: "" },
       12: { name: "Shawarma Sandwich", description: "" },
+      13: { name: "Iraqi Bread Shawarma", description: "" },
+      60: { name: "Crazy Shawarma", description: "" },
       14: { name: "Tandoor Bread Shawarma", description: "" },
       15: { name: "Arabic Shawarma", description: "" },
       16: { name: "Maria", description: "Fresh meat shawarma in tourist bread with grilled tomatoes, biwaz, and special sauce." },
@@ -389,6 +397,8 @@ export const translations = {
       // Chicken Shawarma
       1: { name: "Hartuşa", description: "" },
       2: { name: "Şavurma Sandviç", description: "" },
+      3: { name: "Tandır Ekmeği Şavurma", description: "" },
+      59: { name: "Crazy Şavurma", description: "" },
       4: { name: "Kazablanka", description: "Tavuk şavurma, turşu, ızgara domates, biwaz, nar ekşisi ve özel sos ile Sac ve Turist ekmeği karışımı." },
       5: { name: "Samun Şavurma", description: "" },
       6: { name: "Arap Şavurma Menü", description: "" },
@@ -400,6 +410,8 @@ export const translations = {
       // Meat Shawarma
       11: { name: "Hartuşa", description: "" },
       12: { name: "Şavurma Sandviç", description: "" },
+      13: { name: "Irak Ekmeği Şavurma", description: "" },
+      60: { name: "Crazy Şavurma", description: "" },
       14: { name: "Tandır Ekmeği Şavurma", description: "" },
       15: { name: "Arap Şavurma", description: "" },
       16: { name: "Maria", description: "Izgara domates, biwaz ve özel sos ile turist ekmeğinde taze et şavurma." },
