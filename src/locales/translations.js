@@ -38,7 +38,6 @@ export const translations = {
       meat_shawarma: { label: "شاورما اللحم", description: "شاورما لحم طازجة ومميزة." },
       barbecue: { label: "مشاوي", description: "مشوية على الفحم حتى الكمال." },
       grilled_chicken: { label: "دجاج شواية", description: "دجاج شواية بتتبيلة شهية." },
-      boneless_chicken: { label: "دجاج مسحب", description: "دجاج مسحب مشوي ولذيذ." },
       rice: { label: "رز", description: "أطباق أرز شرقية أصيلة." },
       sides: { label: "مقبلات", description: "الإضافات المثالية لوجبتك." },
       salads: { label: "سلطات", description: "خضار طازجة ومقرمشة." },
@@ -48,8 +47,8 @@ export const translations = {
       // Chicken Shawarma
       1: { name: "خرتوشة", description: "" },
       2: { name: "سندويش شاورما", description: "" },
-      3: { name: "شاورما خبز تنور", description: "" },
       59: { name: "كريزي شاورما", description: "" },
+      61: { name: "كيلو شاورما دجاج", description: "" },
       4: { name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز." },
       5: { name: "شاورما صمون", description: "" },
       6: { name: "وجبة شاورما عربي", description: "" },
@@ -61,9 +60,8 @@ export const translations = {
       // Meat Shawarma
       11: { name: "خرتوشة", description: "" },
       12: { name: "سندويش شاورما", description: "" },
-      13: { name: "شاورما خبز عراقي", description: "" },
       60: { name: "كريزي شاورما", description: "" },
-      14: { name: "شاورما خبز تنور", description: "" },
+      62: { name: "كيلو شاورما لحمة", description: "" },
       15: { name: "شاورما عربي", description: "" },
       16: { name: "ماريا", description: "شاورما لحم طازجة بخبز سياحي مع البندورة المشوية، البيواز، والصوص الخاص." },
       17: { name: "توشكا", description: "شاورما لحم غنية بالجبنة الذائبة والصوص اللذيذ داخل خبز سياحي محمص." },
@@ -73,20 +71,13 @@ export const translations = {
       19: { name: "كباب دجاج", description: "" },
       20: { name: "كبة عل سيخ", description: "" },
       21: { name: "شيش", description: "" },
-      22: { name: "شيش فخد", description: "" },
-      23: { name: "كيليبيك دجاج", description: "" },
       24: { name: "جوانح", description: "" },
-      25: { name: "كبة مشوية", description: "" },
       26: { name: "دجاجة كاملة", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص." },
       27: { name: "وجبة نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري." },
       
       // Grilled Chicken
       28: { name: "دجاجة كاملة", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص." },
       29: { name: "نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري." },
-      
-      // Boneless
-      30: { name: "دجاجة كاملة", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص." },
-      31: { name: "نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري." },
       
       // Rice
       32: { name: "رز كبسة", description: "" },
@@ -217,7 +208,6 @@ export const translations = {
       meat_shawarma: { label: "Meat Shawarma", description: "Fresh and premium meat shawarma." },
       barbecue: { label: "BBQ Grills", description: "Grilled to perfection over charcoal." },
       grilled_chicken: { label: "Rotisserie Chicken", description: "Rotisserie chicken with savory spices." },
-      boneless_chicken: { label: "Special Chicken", description: "Delicious grilled boneless chicken." },
       rice: { label: "Rice", description: "Authentic oriental rice dishes." },
       sides: { label: "Sides", description: "Perfect additions to your meal." },
       salads: { label: "Salads", description: "Fresh and crispy greens." },
@@ -227,8 +217,8 @@ export const translations = {
       // Chicken Shawarma
       1: { name: "Khartoucha", description: "" },
       2: { name: "Shawarma Sandwich", description: "" },
-      3: { name: "Tandoor Bread Shawarma", description: "" },
       59: { name: "Crazy Shawarma", description: "" },
+      61: { name: "One Kilo Chicken Shawarma", description: "" },
       4: { name: "Casablanca", description: "A mix of Saj and Tourist bread with chicken shawarma, pickles, grilled tomatoes, biwaz, pomegranate molasses, and special sauce." },
       5: { name: "Samoon Shawarma", description: "" },
       6: { name: "Arabic Shawarma Meal", description: "" },
@@ -240,9 +230,8 @@ export const translations = {
       // Meat Shawarma
       11: { name: "Khartoucha", description: "" },
       12: { name: "Shawarma Sandwich", description: "" },
-      13: { name: "Iraqi Bread Shawarma", description: "" },
       60: { name: "Crazy Shawarma", description: "" },
-      14: { name: "Tandoor Bread Shawarma", description: "" },
+      62: { name: "One Kilo Meat Shawarma", description: "" },
       15: { name: "Arabic Shawarma", description: "" },
       16: { name: "Maria", description: "Fresh meat shawarma in tourist bread with grilled tomatoes, biwaz, and special sauce." },
       17: { name: "Toshka", description: "Rich meat shawarma with melted cheese and delicious sauce inside toasted tourist bread." },
@@ -252,20 +241,13 @@ export const translations = {
       19: { name: "Chicken Kebab", description: "" },
       20: { name: "Kibbeh on Skewer", description: "" },
       21: { name: "Shish Tawook", description: "" },
-      22: { name: "Shish Thigh", description: "" },
-      23: { name: "Chicken Kelebek", description: "" },
       24: { name: "Wings", description: "" },
-      25: { name: "Grilled Kibbeh", description: "" },
       26: { name: "Whole Chicken", description: "Authentic grilled chicken served with mixed vegetables and our special restaurant sauce." },
       27: { name: "Half Chicken Meal", description: "Carefully grilled half chicken, served with mixed vegetables and our secret sauce." },
       
       // Grilled Chicken
       28: { name: "Whole Chicken", description: "Authentic grilled chicken served with mixed vegetables and our special restaurant sauce." },
       29: { name: "Half Chicken", description: "Carefully grilled half chicken, served with mixed vegetables and our secret sauce." },
-      
-      // Boneless
-      30: { name: "Whole Chicken", description: "Authentic grilled chicken served with mixed vegetables and our special restaurant sauce." },
-      31: { name: "Half Chicken", description: "Carefully grilled half chicken, served with mixed vegetables and our secret sauce." },
       
       // Rice
       32: { name: "Kabsa Rice", description: "" },
@@ -387,7 +369,6 @@ export const translations = {
       meat_shawarma: { label: "Et Şavurma", description: "Taze ve premium et şavurma." },
       barbecue: { label: "Izgaralar", description: "Kömür ateşinde mükemmel ızgara." },
       grilled_chicken: { label: "Piliç Çevirme", description: "Nefis baharatlı piliç çevirme." },
-      boneless_chicken: { label: "Kemiksiz Tavuk", description: "Lezzetli ızgara kemiksiz tavuk." },
       rice: { label: "Pilav", description: "Otantik doğu pilavı çeşitleri." },
       sides: { label: "Yan Lezzetler", description: "Yemeğiniz için mükemmel eklemeler." },
       salads: { label: "Salatalar", description: "Taze ve çıtır yeşillikler." },
@@ -397,8 +378,8 @@ export const translations = {
       // Chicken Shawarma
       1: { name: "Hartuşa", description: "" },
       2: { name: "Şavurma Sandviç", description: "" },
-      3: { name: "Tandır Ekmeği Şavurma", description: "" },
       59: { name: "Crazy Şavurma", description: "" },
+      61: { name: "Bir Kilo Tavuk Şavurma", description: "" },
       4: { name: "Kazablanka", description: "Tavuk şavurma, turşu, ızgara domates, biwaz, nar ekşisi ve özel sos ile Sac ve Turist ekmeği karışımı." },
       5: { name: "Samun Şavurma", description: "" },
       6: { name: "Arap Şavurma Menü", description: "" },
@@ -410,9 +391,8 @@ export const translations = {
       // Meat Shawarma
       11: { name: "Hartuşa", description: "" },
       12: { name: "Şavurma Sandviç", description: "" },
-      13: { name: "Irak Ekmeği Şavurma", description: "" },
       60: { name: "Crazy Şavurma", description: "" },
-      14: { name: "Tandır Ekmeği Şavurma", description: "" },
+      62: { name: "Bir Kilo Et Şavurma", description: "" },
       15: { name: "Arap Şavurma", description: "" },
       16: { name: "Maria", description: "Izgara domates, biwaz ve özel sos ile turist ekmeğinde taze et şavurma." },
       17: { name: "Toşka", description: "Kızarmış turist ekmeği içinde eritilmiş peynir ve lezzetli sos ile zengin et şavurma." },
@@ -422,20 +402,13 @@ export const translations = {
       19: { name: "Tavuk Kebap", description: "" },
       20: { name: "Şişte İçli Köfte", description: "" },
       21: { name: "Şiş Tavuk", description: "" },
-      22: { name: "Şiş But", description: "" },
-      23: { name: "Tavuk Kelebek", description: "" },
       24: { name: "Kanat", description: "" },
-      25: { name: "Izgara İçli Köfte", description: "" },
       26: { name: "Bütün Tavuk", description: "Karışık sebzeler ve özel restoran sosumuzla sunulan otantik ızgara tavuk." },
       27: { name: "Yarım Tavuk Menü", description: "Özenle ızgara edilmiş yarım tavuk, karışık sebzeler ve gizli sosumuzla sunulur." },
       
       // Grilled Chicken
       28: { name: "Bütün Tavuk", description: "Karışık sebzeler ve özel restoran sosumuzla sunulan otantik ızgara tavuk." },
       29: { name: "Yarım Tavuk", description: "Özenle ızgara edilmiş yarım tavuk, karışık sebzeler ve gizli sosumuzla sunulur." },
-      
-      // Boneless
-      30: { name: "Bütün Tavuk", description: "Karışık sebzeler ve özel restoran sosumuzla sunulan otantik ızgara tavuk." },
-      31: { name: "Yarım Tavuk", description: "Özenle ızgara edilmiş yarım tavuk, karışık sebzeler ve gizli sosumuzla sunulur." },
       
       // Rice
       32: { name: "Kabsa Pilavı", description: "" },

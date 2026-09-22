@@ -10,11 +10,11 @@ export function CartProvider({ children }) {
     if (!savedCart) return [];
 
     try {
-      return JSON.parse(savedCart).map(savedItem => {
+      return JSON.parse(savedCart).flatMap(savedItem => {
         const currentItem = menuItemsById.get(savedItem.id);
         return currentItem
-          ? { ...currentItem, quantity: savedItem.quantity }
-          : savedItem;
+          ? [{ ...currentItem, quantity: savedItem.quantity }]
+          : [];
       });
     } catch {
       return [];

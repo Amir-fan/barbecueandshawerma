@@ -9,7 +9,6 @@ const CAT_IMAGES = {
   meat_shawarma:    "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=900&q=85&auto=format&fit=crop",
   barbecue:         "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=900&q=85&auto=format&fit=crop&crop=center",
   grilled_chicken:  "https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?w=900&q=85&auto=format&fit=crop",
-  boneless_chicken: "https://images.unsplash.com/photo-1562802378-063ec186a863?w=900&q=85&auto=format&fit=crop",
   sides:            "https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?w=900&q=85&auto=format&fit=crop",
   salads:           "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&q=85&auto=format&fit=crop",
 };

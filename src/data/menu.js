@@ -3,7 +3,6 @@ export const menuCategories = [
   { id: "meat_shawarma", label: "شاورما اللحم", description: "شاورما لحم طازجة ومميزة." },
   { id: "barbecue", label: "مشاوي", description: "مشوية على الفحم حتى الكمال." },
   { id: "grilled_chicken", label: "دجاج شواية", description: "دجاج شواية بتتبيلة شهية." },
-  { id: "boneless_chicken", label: "دجاج مسحب", description: "دجاج مسحب مشوي ولذيذ." },
   { id: "rice", label: "رز", description: "أطباق أرز شرقية أصيلة." },
   { id: "sides", label: "مقبلات", description: "الإضافات المثالية لوجبتك." },
   { id: "salads", label: "سلطات", description: "خضار طازجة ومقرمشة." },
@@ -15,7 +14,6 @@ export const heroCategories = [
   { id: "meat_shawarma", label: "شاورما اللحم", description: "شاورما لحم طازجة ومميزة." },
   { id: "barbecue", label: "مشاوي", description: "مشوية على الفحم حتى الكمال." },
   { id: "grilled_chicken", label: "دجاج شواية", description: "دجاج شواية بتتبيلة شهية." },
-  { id: "boneless_chicken", label: "دجاج مسحب", description: "دجاج مسحب مشوي ولذيذ." },
   { id: "sides", label: "مقبلات", description: "الإضافات المثالية لوجبتك." },
   { id: "salads", label: "سلطات", description: "خضار طازجة ومقرمشة." }
 ];
@@ -41,8 +39,8 @@ export const menuItems = [
   // chicken_shawarma
   { id: 1, category: "chicken_shawarma", name: "خرتوشة", description: "", price: 100, image: IMG.shawarma1 },
   { id: 2, category: "chicken_shawarma", name: "صندويشة شاورما", description: "", price: 250, image: IMG.shawarma1 },
-  { id: 3, category: "chicken_shawarma", name: "شاورما خبز تنور", description: "", price: 250, image: IMG.shawarma1 },
   { id: 59, category: "chicken_shawarma", name: "كريزي شاورما", description: "", price: 280, image: IMG.shawarma1 },
+  { id: 61, category: "chicken_shawarma", name: "كيلو شاورما دجاج", description: "", price: 1200, image: IMG.shawarma1 },
   { id: 4, category: "chicken_shawarma", name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز.", price: 250, image: IMG.shawarma1 },
   { id: 5, category: "chicken_shawarma", name: "شاورما صمون", description: "", price: 250, image: IMG.shawarma1 },
   { id: 6, category: "chicken_shawarma", name: "وجبة شاورما عربي", description: "", price: 500, image: IMG.shawarma1 },
@@ -54,9 +52,8 @@ export const menuItems = [
   // meat_shawarma
   { id: 11, category: "meat_shawarma", name: "خرتوشة", description: "", price: 200, image: IMG.shawarma2 },
   { id: 12, category: "meat_shawarma", name: "صندويشة شاورما", description: "", price: 400, image: IMG.shawarma2 },
-  { id: 13, category: "meat_shawarma", name: "شاورما خبز عراقي", description: "", price: 300, image: IMG.shawarma2 },
   { id: 60, category: "meat_shawarma", name: "كريزي شاورما", description: "", price: 430, image: IMG.shawarma2 },
-  { id: 14, category: "meat_shawarma", name: "شاورما خبز تنور", description: "", price: 400, image: IMG.shawarma2 },
+  { id: 62, category: "meat_shawarma", name: "كيلو شاورما لحمة", description: "", price: 3000, image: IMG.shawarma2 },
   { id: 15, category: "meat_shawarma", name: "شاورما عربي", description: "", price: 700, image: IMG.shawarma2 },
   { id: 16, category: "meat_shawarma", name: "ماريا", description: "شاورما لحم طازجة بخبز سياحي مع البندورة المشوية، البيواز، والصوص الخاص.", price: 800, image: IMG.shawarma2 },
   { id: 17, category: "meat_shawarma", name: "توشكا", description: "شاورما لحم غنية بالجبنة الذائبة والصوص اللذيذ داخل خبز سياحي محمص.", price: 800, image: IMG.shawarma2 },
@@ -65,21 +62,14 @@ export const menuItems = [
   // barbecue
   { id: 19, category: "barbecue", name: "كباب دجاج", description: "", price: 1000, image: IMG.grill2 },
   { id: 20, category: "barbecue", name: "كبة عل سيخ", description: "", price: 1000, image: IMG.grill1 },
-  { id: 21, category: "barbecue", name: "شيش", description: "", price: 1300, image: IMG.chicken },
-  { id: 22, category: "barbecue", name: "شيش فخد", description: "", price: 1300, image: IMG.chicken },
-  { id: 23, category: "barbecue", name: "كيليبيك دجاج", description: "", price: 1200, image: IMG.chicken },
-  { id: 24, category: "barbecue", name: "جوانح", description: "", price: 1200, image: IMG.chicken },
-  { id: 25, category: "barbecue", name: "كبة مشوية", description: "", price: 200, image: IMG.grill1 },
+  { id: 21, category: "barbecue", name: "شيش", description: "", price: 1200, image: IMG.chicken },
+  { id: 24, category: "barbecue", name: "جوانح", description: "", price: 1000, image: IMG.chicken },
   { id: 26, category: "barbecue", name: "دجاجة كاملة", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص.", price: 1300, image: IMG.chicken },
   { id: 27, category: "barbecue", name: "وجبة نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 650, image: IMG.chicken },
 
   // grilled_chicken
   { id: 28, category: "grilled_chicken", name: "دجاجة كامل", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص.", price: 1300, image: IMG.chicken },
   { id: 29, category: "grilled_chicken", name: "نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 650, image: IMG.chicken },
-
-  // boneless_chicken
-  { id: 30, category: "boneless_chicken", name: "دجاجة كاملة", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص.", price: 1500, image: IMG.chicken },
-  { id: 31, category: "boneless_chicken", name: "نص دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 750, image: IMG.chicken },
 
   // rice
   { id: 32, category: "rice", name: "رز كبسة", description: "", price: 400, image: IMG.rice1 },
