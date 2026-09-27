@@ -72,6 +72,8 @@ export const translations = {
       20: { name: "كبة عل سيخ", description: "" },
       21: { name: "شيش", description: "" },
       24: { name: "جوانح", description: "" },
+      63: { name: "صندويش شيش", description: "" },
+      64: { name: "صندويش كباب", description: "" },
       26: { name: "دجاجة كاملة", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص." },
       27: { name: "وجبة نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري." },
       
@@ -242,6 +244,8 @@ export const translations = {
       20: { name: "Kibbeh on Skewer", description: "" },
       21: { name: "Shish Tawook", description: "" },
       24: { name: "Wings", description: "" },
+      63: { name: "Shish Sandwich", description: "" },
+      64: { name: "Kebab Sandwich", description: "" },
       26: { name: "Whole Chicken", description: "Authentic grilled chicken served with mixed vegetables and our special restaurant sauce." },
       27: { name: "Half Chicken Meal", description: "Carefully grilled half chicken, served with mixed vegetables and our secret sauce." },
       
@@ -403,6 +407,8 @@ export const translations = {
       20: { name: "Şişte İçli Köfte", description: "" },
       21: { name: "Şiş Tavuk", description: "" },
       24: { name: "Kanat", description: "" },
+      63: { name: "Şiş Sandviç", description: "" },
+      64: { name: "Kebap Sandviç", description: "" },
       26: { name: "Bütün Tavuk", description: "Karışık sebzeler ve özel restoran sosumuzla sunulan otantik ızgara tavuk." },
       27: { name: "Yarım Tavuk Menü", description: "Özenle ızgara edilmiş yarım tavuk, karışık sebzeler ve gizli sosumuzla sunulur." },
       

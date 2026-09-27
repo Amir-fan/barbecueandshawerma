@@ -51,7 +51,7 @@ export const menuItems = [
 
   // meat_shawarma
   { id: 11, category: "meat_shawarma", name: "خرتوشة", description: "", price: 200, image: IMG.shawarma2 },
-  { id: 12, category: "meat_shawarma", name: "صندويشة شاورما", description: "", price: 400, image: IMG.shawarma2 },
+  { id: 12, category: "meat_shawarma", name: "صندويشة شاورما", description: "", price: 500, image: IMG.shawarma2 },
   { id: 60, category: "meat_shawarma", name: "كريزي شاورما", description: "", price: 430, image: IMG.shawarma2 },
   { id: 62, category: "meat_shawarma", name: "كيلو شاورما لحمة", description: "", price: 3000, image: IMG.shawarma2 },
   { id: 15, category: "meat_shawarma", name: "شاورما عربي", description: "", price: 700, image: IMG.shawarma2 },
@@ -64,6 +64,8 @@ export const menuItems = [
   { id: 20, category: "barbecue", name: "كبة عل سيخ", description: "", price: 1000, image: IMG.grill1 },
   { id: 21, category: "barbecue", name: "شيش", description: "", price: 1200, image: IMG.chicken },
   { id: 24, category: "barbecue", name: "جوانح", description: "", price: 1000, image: IMG.chicken },
+  { id: 63, category: "barbecue", name: "صندويش شيش", description: "", price: 30000, image: IMG.chicken },
+  { id: 64, category: "barbecue", name: "صندويش كباب", description: "", price: 30000, image: IMG.grill2 },
   { id: 26, category: "barbecue", name: "دجاجة كاملة", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص.", price: 1300, image: IMG.chicken },
   { id: 27, category: "barbecue", name: "وجبة نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 650, image: IMG.chicken },
 
