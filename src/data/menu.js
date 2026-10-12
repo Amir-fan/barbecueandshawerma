@@ -43,21 +43,21 @@ export const menuItems = [
   { id: 61, category: "chicken_shawarma", name: "كيلو شاورما دجاج", description: "", price: 1200, image: IMG.shawarma1 },
   { id: 4, category: "chicken_shawarma", name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز.", price: 250, image: IMG.shawarma1 },
   { id: 5, category: "chicken_shawarma", name: "شاورما صمون", description: "", price: 250, image: IMG.shawarma1 },
-  { id: 6, category: "chicken_shawarma", name: "وجبة شاورما عربي", description: "", price: 500, image: IMG.shawarma1 },
-  { id: 7, category: "chicken_shawarma", name: "شاورما ايطالي", description: "بخبز سياحي محمص مع صوصنا الخاص، شاورما دجاج، فلفل ألوان طازج، فطر، ذرة، وجبنة ذائبة.", price: 600, image: IMG.shawarma1 },
-  { id: 8, category: "chicken_shawarma", name: "شاورما اكسترا", description: "شاورما دجاج غنية بخبز الصاج، مع الفطر، الذرة، الجبنة الذائبة، والصوص اللذيذ.", price: 600, image: IMG.shawarma1 },
-  { id: 9, category: "chicken_shawarma", name: "فتة شاورمة", description: "طبقات من الخبز المقلي والأرز الأبيض مع شاورما الدجاج، مغطاة بصوص الطحينية والمكسرات المحمصة.", price: 400, image: IMG.fatteh },
+  { id: 6, category: "chicken_shawarma", name: "وجبة شاورما عربي", description: "", price: 600, image: IMG.shawarma1 },
+  { id: 7, category: "chicken_shawarma", name: "شاورما ايطالي", description: "بخبز سياحي محمص مع صوصنا الخاص، شاورما دجاج، فلفل ألوان طازج، فطر، ذرة، وجبنة ذائبة.", price: 700, image: IMG.shawarma1 },
+  { id: 8, category: "chicken_shawarma", name: "شاورما اكسترا", description: "شاورما دجاج غنية بخبز الصاج، مع الفطر، الذرة، الجبنة الذائبة، والصوص اللذيذ.", price: 700, image: IMG.shawarma1 },
+  { id: 9, category: "chicken_shawarma", name: "فتة شاورمة", description: "طبقات من الخبز المقلي والأرز الأبيض مع شاورما الدجاج، مغطاة بصوص الطحينية والمكسرات المحمصة.", price: 500, image: IMG.fatteh },
   { id: 10, category: "chicken_shawarma", name: "شاورما شيك", description: "شاورما دجاج مع بطاطا مقرمشة، بندورة، خس، مخلل، مغطاة بصوص الرانش والباربيكيو.", price: 350, image: IMG.shawarma1 },
 
   // meat_shawarma
   { id: 11, category: "meat_shawarma", name: "خرتوشة", description: "", price: 200, image: IMG.shawarma2 },
-  { id: 12, category: "meat_shawarma", name: "صندويشة شاورما", description: "", price: 500, image: IMG.shawarma2 },
+  { id: 12, category: "meat_shawarma", name: "صندويشة شاورما", description: "", price: 600, image: IMG.shawarma2 },
   { id: 60, category: "meat_shawarma", name: "كريزي شاورما", description: "", price: 430, image: IMG.shawarma2 },
   { id: 62, category: "meat_shawarma", name: "كيلو شاورما لحمة", description: "", price: 3000, image: IMG.shawarma2 },
-  { id: 15, category: "meat_shawarma", name: "شاورما عربي", description: "", price: 700, image: IMG.shawarma2 },
+  { id: 15, category: "meat_shawarma", name: "شاورما عربي", description: "", price: 800, image: IMG.shawarma2 },
   { id: 16, category: "meat_shawarma", name: "ماريا", description: "شاورما لحم طازجة بخبز سياحي مع البندورة المشوية، البيواز، والصوص الخاص.", price: 800, image: IMG.shawarma2 },
   { id: 17, category: "meat_shawarma", name: "توشكا", description: "شاورما لحم غنية بالجبنة الذائبة والصوص اللذيذ داخل خبز سياحي محمص.", price: 800, image: IMG.shawarma2 },
-  { id: 18, category: "meat_shawarma", name: "فتة", description: "فتة شهية من الخبز المقلي والأرز مع شاورما اللحم، مزينة بصوص الطحينية والمكسرات.", price: 600, image: IMG.fatteh },
+  { id: 18, category: "meat_shawarma", name: "فتة", description: "فتة شهية من الخبز المقلي والأرز مع شاورما اللحم، مزينة بصوص الطحينية والمكسرات.", price: 700, image: IMG.fatteh },
 
   // barbecue
   { id: 19, category: "barbecue", name: "كباب دجاج", description: "", price: 1000, image: IMG.grill2 },
