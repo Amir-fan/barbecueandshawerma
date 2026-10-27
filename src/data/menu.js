@@ -40,9 +40,9 @@ export const menuItems = [
   { id: 1, category: "chicken_shawarma", name: "خرتوشة", description: "", price: 100, image: IMG.shawarma1 },
   { id: 2, category: "chicken_shawarma", name: "صندويشة شاورما", description: "", price: 250, image: IMG.shawarma1 },
   { id: 59, category: "chicken_shawarma", name: "كريزي شاورما", description: "", price: 280, image: IMG.shawarma1 },
-  { id: 61, category: "chicken_shawarma", name: "كيلو شاورما دجاج", description: "", price: 1200, image: IMG.shawarma1 },
-  { id: 4, category: "chicken_shawarma", name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز.", price: 250, image: IMG.shawarma1 },
-  { id: 5, category: "chicken_shawarma", name: "شاورما صمون", description: "", price: 250, image: IMG.shawarma1 },
+  { id: 61, category: "chicken_shawarma", name: "كيلو شاورما دجاج", description: "", price: 1500, image: IMG.shawarma1 },
+  { id: 4, category: "chicken_shawarma", name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز.", price: 280, image: IMG.shawarma1 },
+  { id: 5, category: "chicken_shawarma", name: "شاورما صمون", description: "", price: 280, image: IMG.shawarma1 },
   { id: 6, category: "chicken_shawarma", name: "وجبة شاورما عربي", description: "", price: 600, image: IMG.shawarma1 },
   { id: 7, category: "chicken_shawarma", name: "شاورما ايطالي", description: "بخبز سياحي محمص مع صوصنا الخاص، شاورما دجاج، فلفل ألوان طازج، فطر، ذرة، وجبنة ذائبة.", price: 700, image: IMG.shawarma1 },
   { id: 8, category: "chicken_shawarma", name: "شاورما اكسترا", description: "شاورما دجاج غنية بخبز الصاج، مع الفطر، الذرة، الجبنة الذائبة، والصوص اللذيذ.", price: 700, image: IMG.shawarma1 },
@@ -74,9 +74,9 @@ export const menuItems = [
   { id: 29, category: "grilled_chicken", name: "نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 650, image: IMG.chicken },
 
   // rice
-  { id: 32, category: "rice", name: "رز كبسة", description: "", price: 400, image: IMG.rice1 },
-  { id: 33, category: "rice", name: "رز ابيض", description: "", price: 400, image: IMG.rice1 },
-  { id: 34, category: "rice", name: "رز مندي", description: "", price: 400, image: IMG.rice1 },
+  { id: 32, category: "rice", name: "رز كبسة", description: "", price: 250, image: IMG.rice1 },
+  { id: 33, category: "rice", name: "رز ابيض", description: "", price: 250, image: IMG.rice1 },
+  { id: 34, category: "rice", name: "رز مندي", description: "", price: 250, image: IMG.rice1 },
   { id: 35, category: "rice", name: "فريكة", description: "", price: 500, image: IMG.rice1 },
 
   // sides
