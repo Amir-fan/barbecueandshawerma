@@ -64,16 +64,20 @@ const IMG = {
   biwaz: foodImage("biwaz"),
   seasonalSalad: foodImage("seasonalSalad"),
   ketchup: foodImage("ketchup"),
-  barbecueSauce: foodImage("barbecueSauce")
+  barbecueSauce: foodImage("barbecueSauce"),
+  italianBbs: "/Bbs/ايطالي.JPG",
+  chickenSandwichBbs: "/Bbs/صندويشة شاورما دجاج.JPG",
+  halfGrilledChickenBbs: "/Bbs/نص دجاج مشوي.JPG",
+  brakJebneh: "/Bbs/برك جبنة.JPG"
 };
 
 export const menuItems = [
   // chicken_shawarma
   { id: 1, category: "chicken_shawarma", name: "خرتوشة", description: "", price: 100, image: IMG.chickenKhartoucha },
-  { id: 2, category: "chicken_shawarma", name: "صندويشة شاورما", description: "", price: 250, image: IMG.chickenSandwich },
+  { id: 2, category: "chicken_shawarma", name: "صندويشة شاورما", description: "", price: 250, image: IMG.chickenSandwichBbs },
   { id: 59, category: "chicken_shawarma", name: "كريزي شاورما", description: "", price: 280, image: IMG.crazyShawarma },
   { id: 61, category: "chicken_shawarma", name: "كيلو شاورما دجاج", description: "", price: 1500, image: IMG.shawarma1 },
-  { id: 4, category: "chicken_shawarma", name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز.", price: 280, image: IMG.shawarma1 },
+  { id: 4, category: "chicken_shawarma", name: "كزابلانكا", description: "مزيج بخبز الصاج والسياحي مع شاورما الدجاج، مخلل، بندورة مشوية، بيواز، دبس الرمان، وصوص مميز.", price: 280, image: IMG.chickenSandwichBbs },
   { id: 5, category: "chicken_shawarma", name: "شاورما صمون", description: "", price: 280, image: IMG.shawarma1 },
   { id: 6, category: "chicken_shawarma", name: "وجبة شاورما عربي", description: "", price: 600, image: IMG.chickenArabic },
   { id: 7, category: "chicken_shawarma", name: "شاورما ايطالي", description: "بخبز سياحي محمص مع صوصنا الخاص، شاورما دجاج، فلفل ألوان طازج، فطر، ذرة، وجبنة ذائبة.", price: 700, image: IMG.italianShawarma },
@@ -88,7 +92,7 @@ export const menuItems = [
   { id: 62, category: "meat_shawarma", name: "كيلو شاورما لحمة", description: "", price: 3000, image: IMG.shawarma2 },
   { id: 15, category: "meat_shawarma", name: "شاورما عربي", description: "", price: 800, image: IMG.meatArabic },
   { id: 16, category: "meat_shawarma", name: "ماريا", description: "شاورما لحم طازجة بخبز سياحي مع البندورة المشوية، البيواز، والصوص الخاص.", price: 800, image: IMG.maria },
-  { id: 17, category: "meat_shawarma", name: "توشكا", description: "شاورما لحم غنية بالجبنة الذائبة والصوص اللذيذ داخل خبز سياحي محمص.", price: 800, image: IMG.shawarma2 },
+  { id: 17, category: "meat_shawarma", name: "توشكا", description: "شاورما لحم غنية بالجبنة الذائبة والصوص اللذيذ داخل خبز سياحي محمص.", price: 800, image: IMG.italianBbs },
   { id: 18, category: "meat_shawarma", name: "فتة", description: "فتة شهية من الخبز المقلي والأرز مع شاورما اللحم، مزينة بصوص الطحينية والمكسرات.", price: 700, image: IMG.meatFatteh },
 
   // barbecue
@@ -102,8 +106,8 @@ export const menuItems = [
   { id: 27, category: "barbecue", name: "وجبة نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 650, image: IMG.halfChickenMeal },
 
   // grilled_chicken
-  { id: 28, category: "grilled_chicken", name: "دجاجة كامل", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص.", price: 1300, image: IMG.chicken },
-  { id: 29, category: "grilled_chicken", name: "نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 650, image: IMG.halfGrilledChicken },
+  { id: 28, category: "grilled_chicken", name: "دجاجة كامل", description: "دجاج مشوي على الأصول يقدم مع خضار مشكلة وصوص المطعم الخاص.", price: 1300, image: IMG.halfGrilledChickenBbs },
+  { id: 29, category: "grilled_chicken", name: "نصف دجاجة", description: "نصف دجاجة مشوية بعناية، تقدم مع خضار مشكلة وصوصنا السري.", price: 650, image: IMG.halfGrilledChickenBbs },
 
   // rice
   { id: 32, category: "rice", name: "رز كبسة", description: "", price: 250, image: IMG.kabsaRice },
@@ -116,7 +120,7 @@ export const menuItems = [
   { id: 37, category: "sides", name: "بطاطا شرحات", description: "", price: 200, image: IMG.fries },
   { id: 38, category: "sides", name: "بومفريت", description: "", price: 200, image: IMG.pommesFrites },
   { id: 39, category: "sides", name: "كبة مقلية", description: "", price: 90, image: IMG.friedKibbeh },
-  { id: 40, category: "sides", name: "برك جبنة", description: "", price: 60, image: IMG.fries },
+  { id: 40, category: "sides", name: "برك جبنة", description: "", price: 60, image: IMG.brakJebneh },
   { id: 41, category: "sides", name: "يالانجي", description: "", price: 200, image: IMG.yalanji },
   { id: 42, category: "sides", name: "متبل", description: "", price: 150, image: IMG.mutabal },
   { id: 43, category: "sides", name: "حمص", description: "", price: 150, image: IMG.hummus },
